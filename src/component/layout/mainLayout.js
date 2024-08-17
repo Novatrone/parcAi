@@ -12,7 +12,7 @@ export default function MainLayout({ children }) {
         <Col>
             <Navbar expand="lg" variant="light" className="main-navbar">
                 <Col className="navigation__logo-wrapper">
-                    <img src="/images/logo-2.png" width="220" style={{ objectFit: "contain" }} alt="logo" class="navigation__logo" />
+                    <img src="/images/Logo-2.png" width="220" style={{ objectFit: "contain" }} alt="logo" class="navigation__logo" />
                 </Col>
                 <>
                     <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={toggleOffcanvas} />
