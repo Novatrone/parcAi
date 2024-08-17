@@ -162,3 +162,36 @@ h5 {
     padding: 0.5rem !important;
   }
 }
+
+.custom-accordion .accordion-item {
+  background-color: #323576; /* Set background color */
+  border: none;
+}
+
+.custom-accordion .accordion-header {
+  color: white; /* Set text color */
+  background-color: #323576; /* Match the background color */
+  border: none;
+}
+
+.custom-accordion .accordion-body {
+  background-color: #323576; /* Match the background color */
+  color: white; /* Set text color */
+}
+
+.custom-accordion .accordion-button {
+  background-color: #323576; /* Match the background color */
+  color: white; /* Set text color */
+  border: none;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+  color: white; /* Ensure text remains white when expanded */
+  background-color: #3e4481; /* Slightly darker shade for expanded item */
+}
+
+.custom-accordion .accordion-button:focus {
+  box-shadow: none;
+}
+
+

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 
-export default function Footer() {
+export default function Footer({handleClick}) {
     return (
         <div className="back-blue-1 section_stepper text-white">
             <Container>
@@ -13,7 +13,7 @@ export default function Footer() {
                         <div className='d-flex justify-content-center'>
                             <ul className="list-inline body-1 lh-lg fw-border">
                                 <li className="menu-item">
-                                    <a className='text-white text-decoration-none me-4' rel="privacy-policy" href="/">Faq</a>
+                                    <a onClick={() => handleClick('faq')} className='text-white text-decoration-none me-4' rel="privacy-policy" href="/">Faq</a>
                                 </li>
                                 <li className="menu-item">
                                     <a className='text-white text-decoration-none' href="/">Contact Us</a>

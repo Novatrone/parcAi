@@ -1,10 +1,10 @@
 import React from 'react'
-import { Button, Card, Col, Container, Row } from 'react-bootstrap'
+import { Accordion, Button, Card, Col, Container, Row } from 'react-bootstrap'
 
 export default function Home() {
     return (
         <>
-            <div className="hero-home">
+            <div id="go_to_top" className="hero-home">
                 <Container>
                     <Row>
                         <Col md={7} xl={6} className='py-5'>
@@ -40,7 +40,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div id="content" className='site-content'>
+            <div id="sales_strategy" className='site-content'>
                 <div className="back-blue-1 section_stepper text-white">
                     <Container>
                         <Row>
@@ -169,7 +169,7 @@ export default function Home() {
                 </Container>
             </div>
 
-            <div id="content" className='site-content'>
+            <div id="contact_us" className='site-content'>
                 <div>
                     <img className="w-100" src="/images/Homepage-trim-3.svg" alt="shapes" width="100%" height="100%" />
                 </div>
@@ -221,7 +221,7 @@ export default function Home() {
                 </Container>
             </div>
 
-            <div id="team" className='site-team'>
+            <div id="our_team" className='site-team'>
                 <div>
                     <img className="w-100" src="/images/Homepage-trim-3.svg" alt="shapes" width="100%" height="100%" />
                 </div>
@@ -318,7 +318,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div id="solution" className='blue_bottom_stepper'>
+            <div id="Offerings" className='blue_bottom_stepper'>
                 <Container>
                     <Row className="gx-5">
                         <Col xs={12}>
@@ -354,6 +354,46 @@ export default function Home() {
                     </Row>
                 </Container>
             </div>
+
+            <div id="faq" className='site-content'>
+                <div>
+                    <img className="w-100" src="/images/Homepage-trim-3.svg" alt="shapes" width="100%" height="100%" />
+                </div>
+                <div className="back-blue-1 section_stepper text-white">
+                    <Container>
+                        <Row>
+                            <Col xs={12} className="mb-2">
+                                <div className='d-flex flex-column align-items-center text-center'>
+                                    <div className="h2 pb-4">
+                                        <div>Explore<span class="h1 ps-2 fw-bold">Our FAQs</span></div>
+                                    </div>
+                                    <Accordion className='w-100 custom-accordion'>
+                                        <Accordion.Item eventKey="0">
+                                            <Accordion.Header>Accordion Item #1</Accordion.Header>
+                                            <Accordion.Body>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                        <Accordion.Item eventKey="1">
+                                            <Accordion.Header>Accordion Item #2</Accordion.Header>
+                                            <Accordion.Body>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                    </Accordion>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
+                </div>
+                {/* <div className="w-100"></div> */}
+                <hr className='m-0' />
+                {/* <div className='section_stepper_bottom'>
+                    <img style={{ transform: "scale(-1)" }} className="w-100 fix_border_top" src="/images/Homepage-trim-3.svg" alt="shapes" width="100%" height="100%" />
+                    <img class="position-absolute top-0 start-0 fix_border_top" src="/images/Homepage-trim-2.svg" alt="" width="100%" />
+                </div> */}
+            </div>
+
         </>
     )
 }
