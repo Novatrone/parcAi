@@ -181,6 +181,14 @@ h5 {
   margin-bottom: 30.9px;
 }
 
+@media (max-width: 769px) {
+  .three-col-stepper__image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50.9px;
+  }
+}
+
 .team-stepper__image {
   width: 250px;
   height: 250px;

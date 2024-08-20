@@ -52,9 +52,9 @@ export default function Home() {
                 <div className="back-blue-1 section_stepper text-white">
                     <Container>
                         <Row>
-                            <Col xs={12} className=" mb-5">
+                            <Col xs={12} md={6} className=" mb-5">
                                 <h2 className="mb-4">Our Product and Sales Strategy</h2>
-                                <p className="body-2 lilac-3" style={{ maxWidth: "45%" }}>
+                                <p className="body-2 lilac-3">
                                     Proactively involving customers as early stakeholders in the product development lifecycle.
                                 </p>
                             </Col>
