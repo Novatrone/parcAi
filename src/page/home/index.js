@@ -1,5 +1,7 @@
 import React from 'react'
 import { Accordion, Button, Card, Col, Container, Row } from 'react-bootstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 
 export default function Home() {
     return (
@@ -8,8 +10,15 @@ export default function Home() {
                 <Container>
                     <Row>
                         <Col md={7} xl={6} className='py-5'>
-                            <h3 style={{ maxWidth: "75%", fontSize: "36px", lineHeight: 1.3 }}>Ensuring seamless access to your GP services exactly when patients need it most.</h3>
-                            <div className='pt-3 pb-4'>
+                            <h2
+                                style={{
+                                    fontSize: "36px",
+                                    lineHeight: 1.3,
+                                }}
+                                className="responsive-heading"
+                            >
+                                Ensuring seamless access to your GP services exactly when patients need it most.
+                            </h2>                            <div className='pt-3 pb-4 text-center text-lg-start'>
                                 <h5>Enable your patients to conveniently book GP appointments and reorder repeat prescriptions online. This approach not only saves time and simplifies tasks but also reduces the strain on practice phone lines, fostering efficient GP practices and empowering patients.</h5>
                             </div>
                             <div className='d-flex gap-4'>
@@ -19,11 +28,10 @@ export default function Home() {
                             </div>
                         </Col>
                         <Col md={5} lg={4} xl={5}>
-                            <Card style={{ width: "400px", position: "relative", borderRadius: "25px", float: "right", overflow: "hidden", marginTop: "115px" }} className='border-0 bg-transparent h-100'>
+                            <Card className='frame_content'>
                                 {/* <img style={{ padding: "12px" }} className="w-100" alt="phone-frame" src="/images/image.png" /> */}
                                 {/* <img className='hero-home__phone-frame' alt="phone-frame" src="/images/iphone-cutout.png" /> */}
                                 <img style={{ padding: "16px", height: "240px" }} alt="phone-frame" src="/images/screenshot_1.png" />
-                                {/* <img className='hero-home__phone-frame' alt="phone-frame" src="/images/monitor.png" /> */}
                                 <img className='hero-home__phone-frame' alt="phone-frame" src="/images/apple_monitor.png" />
                             </Card>
                         </Col>
@@ -244,15 +252,15 @@ export default function Home() {
                                     <div className="mb-3 body-2 text-warning">(Product and PR)</div>
                                 </div>
                                 <div>
-                                    <ul>
+                                    <ul className='ps-4'>
                                         <li>10+ yrs experienced GP in Ireland</li>
                                         <li>35 yrs old family owned practice, New Castle</li>
                                         <li>Treated 15,000+ patients</li>
                                     </ul>
                                 </div>
-                                <div className='text-center'>
-                                    <p className='body-2 mb-0'>Mobile No.: +353 (0) 83-876-6862</p>
-                                    <p>Email: jonathan.graham@hotmail.com</p>
+                                <div className='text-start'>
+                                    <p className='body-2 mb-0'><FontAwesomeIcon className=' icon-color pe-1' icon={faPhone} />: +353 (0) 83-876-6862</p>
+                                    <p><FontAwesomeIcon className=' pe-1 icon-color' icon={faEnvelope} />: jonathan.graham@hotmail.com</p>
                                 </div>
                             </Col>
                             <Col className='px-5' xs={12} md={4}>
@@ -266,7 +274,7 @@ export default function Home() {
                                     <div className="mb-3 body-2 text-warning">(Technology)</div>
                                 </div>
                                 <div>
-                                    <ul>
+                                    <ul className='ps-4'>
                                         <li>Solution architect
                                             Entrepreneur</li>
                                         <li>Developed 200+ web
@@ -277,10 +285,9 @@ export default function Home() {
                                         </li>
                                     </ul>
                                 </div>
-                                <div className='text-center'>
-                                    <p className='body-2 mb-0'>Mobile No.: +353 (0) 83-870-7132</p>
-                                    <p>Email: shailesh.sharma@aol.com
-                                    </p>
+                                <div className='text-start'>
+                                    <p className='body-2 mb-0'><FontAwesomeIcon className=' icon-color pe-1' icon={faPhone} />: +353 (0) 83-870-7132</p>
+                                    <p><FontAwesomeIcon className=' pe-1 icon-color' icon={faEnvelope} />: shailesh.sharma@aol.com</p>
                                 </div>
                             </Col>
                             <Col className='px-5' xs={12} md={4}>
@@ -294,7 +301,7 @@ export default function Home() {
                                     <div className="mb-3 body-2 text-warning">(Sales and Marketing)</div>
                                 </div>
                                 <div>
-                                    <ul>
+                                    <ul className='ps-4'>
                                         <li>7 yrs IT Sales
                                             experience</li>
                                         <li>Experience managing
@@ -304,9 +311,9 @@ export default function Home() {
                                         <li>UCD MBA</li>
                                     </ul>
                                 </div>
-                                <div className='text-center'>
-                                    <p className='body-2 mb-0'>Mobile No.: +353 (0) 89-463-2739</p>
-                                    <p>Email: harshmangla95@gmail.com</p>
+                                <div className='text-start'>
+                                    <p className='body-2 mb-0'><FontAwesomeIcon className='icon-color pe-1' icon={faPhone} />: +353 (0) 89-463-2739</p>
+                                    <p><FontAwesomeIcon className='pe-1 icon-color' icon={faEnvelope} />: harshmangla95@gmail.com</p>
                                 </div>
                             </Col>
                         </Row>
@@ -369,15 +376,38 @@ export default function Home() {
                                     </div>
                                     <Accordion className='w-100 custom-accordion'>
                                         <Accordion.Item eventKey="0">
-                                            <Accordion.Header>Accordion Item #1</Accordion.Header>
+                                            <Accordion.Header>1. What is ThePracAi Solution?</Accordion.Header>
                                             <Accordion.Body>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                            </Accordion.Body>
+                                                ThePracAi Solution is a cutting-edge, AI-driven, cloud-based practice management system designed to transform healthcare operations. It streamlines appointments, patient records, health reports, and physician communication through an intuitive platform accessible anytime, anywhere.                                            </Accordion.Body>
                                         </Accordion.Item>
                                         <Accordion.Item eventKey="1">
-                                            <Accordion.Header>Accordion Item #2</Accordion.Header>
+                                            <Accordion.Header>2. How does ThePracAi Solution enhance efficiency?</Accordion.Header>
                                             <Accordion.Body>
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                By leveraging GenAI, ThePracAi Solution saves up to 2.5 hours daily, allowing healthcare providers to focus more on patient care and less on administrative tasks.
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                        <Accordion.Item eventKey="2">
+                                            <Accordion.Header>3. How does ThePracAi Solution ensure data security?</Accordion.Header>
+                                            <Accordion.Body>
+                                                ThePracAi Solution employs advanced security measures to protect sensitive patient information and ensure compliance with healthcare regulations.
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                        <Accordion.Item eventKey="3">
+                                            <Accordion.Header>4. Is ThePracAi Solution customizable for different healthcare practices?</Accordion.Header>
+                                            <Accordion.Body>
+                                                Yes, ThePracAi Solution offers tailored solutions to meet the specific needs of different healthcare practices, ensuring it fits seamlessly into existing workflows.
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                        <Accordion.Item eventKey="4">
+                                            <Accordion.Header>5. How does ThePracAi Solution support advancements in healthcare operations?</Accordion.Header>
+                                            <Accordion.Body>
+                                                ThePracAi Solution is built on a cloud-based architecture with unlimited scope for advancements, allowing it to evolve with the ever-changing landscape of healthcare technology.
+                                            </Accordion.Body>
+                                        </Accordion.Item>
+                                        <Accordion.Item eventKey="5">
+                                            <Accordion.Header>6. What makes ThePracAi Solution cost-effective?</Accordion.Header>
+                                            <Accordion.Body>
+                                                By automating routine tasks, reducing manual errors, and saving time, ThePracAi Solution helps healthcare practices reduce operational costs while improving efficiency.
                                             </Accordion.Body>
                                         </Accordion.Item>
                                     </Accordion>

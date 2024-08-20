@@ -19,6 +19,10 @@ h5 {
   line-height: 1.4 !important;
 }
 
+.icon-color {
+  color: #09ae61;
+}
+
 .body-2 {
   font-family: "Be Vietnam Pro", sans-serif;
   font-size: 18px;
@@ -55,6 +59,19 @@ h5 {
 
 .back-blue-1 {
   background-color: #36337d;
+}
+
+.responsive-heading {
+  text-align: left;
+  max-width: 75%;
+  text-align: left;
+}
+
+@media (max-width: 576px) {
+  .responsive-heading {
+    max-width: 100%;
+    text-align: center;
+  }
 }
 
 .hero_button {
@@ -97,6 +114,15 @@ h5 {
   padding-bottom: 12rem;
 }
 
+@media (max-width: 769px) {
+  .hero-home {
+    position: relative;
+    overflow: hidden;
+    padding-top: 6.7rem;
+    padding-bottom: 2rem;
+  }
+}
+
 .hero-home__phone-frame {
   position: absolute;
   top: 0;
@@ -104,6 +130,25 @@ h5 {
   z-index: 2;
   /* height: 32.5rem; */
   width: 100%;
+}
+.frame_content {
+  width: 400px;
+  position: relative;
+  border-radius: 25px !important;
+  float: right;
+  overflow: hidden;
+  margin-top: 115px;
+  background-color: transparent !important;
+  height: 100% !important;
+  border: none !important;
+}
+
+@media (max-width: 769px) {
+  .frame_content {
+    width: 100%;
+    margin-top: 10px;
+    height: 360px !important;
+  }
 }
 
 .hero-home__shapes-wrapper {
@@ -194,4 +239,10 @@ h5 {
   box-shadow: none;
 }
 
+.custom-accordion .accordion-button::after {
+  filter: invert(1); /* This inverts the icon color to white */
+}
 
+.custom-accordion .accordion-button:not(.collapsed)::after {
+  filter: invert(1); /* Ensure the icon color remains white when expanded */
+}

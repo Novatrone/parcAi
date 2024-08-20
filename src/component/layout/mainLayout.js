@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Col, Container, Nav, Navbar, Offcanvas } from 'react-bootstrap';
 import Footer from '../footer/footer';
 import { useScroll } from '../../context/scrollContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 export default function MainLayout({ children }) {
     const [show, setShow] = useState(false);
+    const [showScrollUp, setShowScrollUp] = useState(false);
     const { scrollTo } = useScroll();
 
     const handleClick = (id) => {
@@ -16,11 +19,30 @@ export default function MainLayout({ children }) {
     const toggleOffcanvas = () => setShow(!show);
     const closeOffcanvas = () => setShow(false);
 
+    const handleScroll = () => {
+        if (window.scrollY > 200) { // Show button after scrolling 200px
+            setShowScrollUp(true);
+        } else {
+            setShowScrollUp(false);
+        }
+    };
+
+    const scrollUp = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <Col>
             <Navbar expand="lg" variant="light" className="main-navbar">
                 <Col className="navigation__logo-wrapper">
-                    <img src="/images/Logo-2.png" width="220" style={{ objectFit: "contain" }} alt="logo" className="navigation__logo" />
+                    <img src="/images/Logo.png" width="140" style={{ objectFit: "contain" }} alt="logo" className="navigation__logo" />
                 </Col>
                 <>
                     <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={toggleOffcanvas} />
@@ -63,6 +85,25 @@ export default function MainLayout({ children }) {
             <Col>
                 <Footer handleClick={handleClick} />
             </Col>
+            {showScrollUp && (
+                <Button
+                    onClick={scrollUp}
+                    style={{
+                        position: 'fixed',
+                        bottom: '50px',
+                        right: '30px',
+                        zIndex: 1000,
+                        borderRadius: '50%',
+                        padding: '8px 16px',
+                        backgroundColor: '#007bff',
+                        color: 'white',
+                        border: 'none',
+                        fontSize: '20px',
+                    }}
+                >
+                    <FontAwesomeIcon icon={faArrowUp} />
+                </Button>
+            )}
         </Col>
     );
 }
