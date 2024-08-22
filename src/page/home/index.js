@@ -12,19 +12,23 @@ export default function Home() {
                         <Col md={7} xl={6} className='py-5'>
                             <h2
                                 style={{
-                                    fontSize: "36px",
+                                    fontSize: "35px",
                                     lineHeight: 1.3,
+                                    letterSpacing: -0.1
                                 }}
                                 className="responsive-heading"
                             >
-                                Ensuring seamless access to your GP services exactly when patients need it most.
-                            </h2>                            <div className='pt-3 pb-4 text-center text-lg-start'>
-                                <h5>Enable your patients to conveniently book GP appointments and reorder repeat prescriptions online. This approach not only saves time and simplifies tasks but also reduces the strain on practice phone lines, fostering efficient GP practices and empowering patients.</h5>
+                                Revolutionize Healthcare with Generative AI: Empowering
+                                Doctors, Enhancing Efficiency
+                            </h2>
+                            <div className='pt-3 pb-4 text-center text-lg-start'>
+                                <h5>Let your patients make it easy for themselves to book a GP appointment and refill their medicines from the internet. This method does not only help in saving time and simplifying tasks but also reduces the pressure on practice phone lines thus creating efficient GPs’ offices while making patients feel like they are in control of their health.</h5>
                             </div>
                             <div className='d-flex gap-4'>
-                                <button className='hero_button'>
+                                {/* <button className='hero_button'>
                                     <span>Contact Us</span>
-                                </button>
+                                </button> */}
+                                <Button size='lg'>Contact Us</Button>
                             </div>
                         </Col>
                         <Col md={5} lg={4} xl={5}>
@@ -55,7 +59,8 @@ export default function Home() {
                             <Col xs={12} md={6} className=" mb-5">
                                 <h2 className="mb-4">Our Product and Sales Strategy</h2>
                                 <p className="body-2 lilac-3">
-                                    Proactively involving customers as early stakeholders in the product development lifecycle.
+                                    Your Practice, Your System: Co-Create Your AI Healthcare System to
+                                    fit your needs
                                 </p>
                             </Col>
                         </Row>
@@ -66,8 +71,8 @@ export default function Home() {
                                 </div>
                                 <div>
                                     <div className="mb-3 body-2 text-warning">Step 1</div>
-                                    <h5 className="mb-3 white-1">Creating Customer Focus Groups</h5>
-                                    <p className="body-2 white-1">Creating Customer Focus Groups for Product Development</p>
+                                    <h5 className="mb-3 white-1">Envision</h5>
+                                    <p className="body-2 white-1">Share your challenges, needs, and ideas. Define what you want your ideal healthcare system to look like.</p>
                                 </div>
                             </Col>
                             <Col xs={12} md={3}>
@@ -76,8 +81,8 @@ export default function Home() {
                                 </div>
                                 <div>
                                     <div className="mb-3 body-2 text-warning">Step 2</div>
-                                    <h5 className="mb-3 white-1">Dry Runs and Feedback</h5>
-                                    <p className="body-2 white-1">Dry runs in live environment & feedbacks for application testing and enhancement</p>
+                                    <h5 className="mb-3 white-1">Co-Create</h5>
+                                    <p className="body-2 white-1">Partner with our team to build solutions tailored to your vision. Your input drives development.</p>
                                 </div>
                             </Col>
                             <Col xs={12} md={3}>
@@ -86,8 +91,8 @@ export default function Home() {
                                 </div>
                                 <div>
                                     <div className="mb-3 body-2 text-warning">Step 3</div>
-                                    <h5 className="mb-3 white-1">Free Trials</h5>
-                                    <p className="body-2 white-1">Free trials for 2 months for the first 50 practices for product enhancement, as an initial experience and freemium model.</p>
+                                    <h5 className="mb-3 white-1">Experience</h5>
+                                    <p className="body-2 white-1">Test-drive the system with a 2-month free trial. Fine-tune the features and functionalities through real-world feedback.</p>
                                 </div>
                             </Col>
                             <Col xs={12} md={3}>
@@ -96,8 +101,13 @@ export default function Home() {
                                 </div>
                                 <div>
                                     <div className="mb-3 body-2 text-warning">Step 4</div>
-                                    <h5 className="mb-3 white-1">Payment Initiation</h5>
-                                    <p className="body-2 white-1">Payment initiation and reference generation.</p>
+                                    <h5 className="mb-3 white-1">Reap the Rewards</h5>
+                                    <p className="body-2 white-1">Enjoy a subsidized package for your role in shaping the future of healthcare technology. Your customized system, is built by you!</p>
+                                </div>
+                            </Col>
+                            <Col xs={12}>
+                                <div className='d-flex justify-content-center mt-4'>
+                                    <Button size='lg'>Register your interest</Button>
                                 </div>
                             </Col>
                         </Row>
@@ -114,61 +124,102 @@ export default function Home() {
                     <Row className='gx-5'>
                         <Col xs={12}>
                             <div className='d-flex flex-column align-items-center text-center pb-5'>
-                                <div className="h2 pb-4">Why<span className='h1 ps-2 fw-bold'>ParcAi?</span></div>
-                                <p style={{ maxWidth: "70%" }} className='body-2 pb-3'>A cutting-edge, AI-driven, cloud-based practice management system that
-                                    transforms healthcare operations. Seamlessly streamline appointments,
-                                    patient records, health reports, and physician communication with an
-                                    intuitive platform accessible anytime, anywhere.</p>
+                                <div className="h2 pb-4">Foundation<span className='h1 ps-2 fw-bold'> of Success</span></div>
+                                <p style={{ maxWidth: "70%" }} className='body-2 pb-3'>
+                                    A new and advanced AI-powered cloud-based practice management system that revolutionizes healthcare operations. Smoothly integrate appointments, record patients’ information, health reports, and connect to doctors with a user-friendly platform that you can use whenever and wherever.
+                                </p>
                             </div>
                         </Col>
                         <Col xs={12} md={3}>
                             <div className='light_card'>
-                                <div className='d-flex flex-column gap-2'>
-                                    <h5>01</h5>
-                                    <div>
-                                        <img src="/images/time_saving.png" alt='time-saving' width="100%" />
-                                    </div>
-                                    <div>
+                                <div className='card_inner'>
+                                    <div className='card_front'>
+                                        <h5>01</h5>
+                                        <div>
+                                            <img src="/images/time_saving.png" alt='time-saving' width="100%" />
+                                        </div>
                                         <h4 className='text-center'>Time Saving</h4>
                                     </div>
+                                    <div className='card_back'>
+                                        <div className='d-flex w-100 h-100 flex-column'>
+                                            <h6>TIME SAVING</h6>
+                                            <div className='card_back_text'>
+                                                <p className='p-2 rounded'>AI-powered Note making: 2.5 hrs/day/Doctor saved</p>
+                                                <p className='p-2 rounded'>Healthlink integration: Min. 2 hrs/file saved</p>
+                                                <p className='p-2 rounded'>Saves 50% time spent on administrative tasks with new features</p>
+                                                <p className='p-2 rounded'>Saves 2 min per patient visit with Voice-recognition/speech-to-text note making</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </Col>
                         <Col xs={12} md={3}>
                             <div className='light_card'>
-                                <div className='d-flex flex-column gap-2'>
-                                    <h5>02</h5>
-                                    <div>
-                                        <img src="/images/cost-saving.png" alt='time-saving' width="100%" />
-                                    </div>
-                                    <div>
+                                <div className='card_inner'>
+                                    <div className='card_front'>
+                                        <h5>02</h5>
+                                        <div>
+                                            <img src="/images/cost-saving.png" alt='cost-saving' width="100%" />
+                                        </div>
                                         <h4 className='text-center'>Cost Saving</h4>
                                     </div>
+                                    <div className='card_back'>
+                                        <div className='d-flex w-100 h-100 flex-column'>
+                                            <h6>COST SAVING</h6>
+                                            <div className='card_back_text'>
+                                                <p className='p-2 rounded'>Saves up to 40% on operational costs</p>
+                                                <p className='p-2 rounded'>About 50% less costly than incumbent</p>
+                                                <p className='p-2 rounded'>Easy to add or remove storage as per requirements</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </Col>
                         <Col xs={12} md={3}>
                             <div className='light_card'>
-                                <div className='d-flex flex-column gap-2'>
-                                    <h5>03</h5>
-                                    <div>
-                                        <img src="/images/security.png" alt='time-saving' width="100%" />
-                                    </div>
-                                    <div>
+                                <div className='card_inner'>
+                                    <div className='card_front'>
+                                        <h5>03</h5>
+                                        <div>
+                                            <img src="/images/security.png" alt='security' width="100%" />
+                                        </div>
                                         <h4 className='text-center'>Security</h4>
                                     </div>
+                                    <div className='card_back'>
+                                        <div className='d-flex w-100 h-100 flex-column'>
+                                            <h6>SECURITY</h6>
+                                            <div className='card_back_text'>
+                                                <p className='p-2 rounded'>Advanced security measures by AWS</p>
+                                                <p className='p-2 rounded'>Three-tier backup system</p>
+                                                <p className='p-2 rounded'>3-layered security</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </Col>
                         <Col xs={12} md={3}>
                             <div className='light_card'>
-                                <div className='d-flex flex-column gap-2'>
-                                    <h5>04</h5>
-                                    <div>
-                                        <img src="/images/convenience.png" alt='time-saving' width="100%" />
-                                    </div>
-                                    <div>
+                                <div className='card_inner'>
+                                    <div className='card_front'>
+                                        <h5>04</h5>
+                                        <div>
+                                            <img src="/images/convenience.png" alt='convenience' width="100%" />
+                                        </div>
                                         <h4 className='text-center'>Convenience</h4>
+                                    </div>
+                                    <div className='card_back'>
+                                        <div className='d-flex w-100 h-100 flex-column'>
+                                            <h6>CONVENIENCE</h6>
+                                            <div className='card_back_text'>
+                                                <p className='p-2 rounded'>Your practice in your pocket</p>
+                                                <p className='p-2 rounded'>Access from anywhere, anytime</p>
+                                                <p className='p-2 rounded'>Modern and Intuitive user interface</p>
+                                                <p className='p-2 rounded'>98% server uptime guaranteed</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -186,9 +237,12 @@ export default function Home() {
                         <Row>
                             <Col xs={12} className="mb-2">
                                 <div className='d-flex flex-column align-items-center text-center'>
-                                    <h2 className="mb-4">Transform and optimize your GP practice for superior performance and patient care</h2>
+                                    <h2 className="mb-4">Elevate Your GP Practice for Peak Performance and Care</h2>
                                     <p className="body-2 lilac-3 mb-5" style={{ maxWidth: "70%" }}>
-                                        Unlock the full potential of your practice with our integrated, user-friendly patient app. Discover ways to maximize efficiencies, streamline workflows, and empower your patients for an enhanced healthcare experience.                                    </p>
+                                        Unlock the full potential of your practice with our AI-driven, integrated, user-friendly practice management system.
+                                        Discover ways to maximize efficiencies, streamline workflows, and empower your patients for an enhanced healthcare
+                                        experience.
+                                    </p>
                                     <Button size='lg'>Get in touch</Button>
                                 </div>
                             </Col>
@@ -214,15 +268,16 @@ export default function Home() {
                         </Col>
                         <Col xs={12} md={6}>
                             <ul style={{ fontSize: "22px", fontWeight: 500 }} className='lh-lg'>
-                                <li>Enhanced Efficiency with GenAI</li>
-                                <li>Comprehensive API Integrations</li>
-                                <li>Cloud-based architecture</li>
-                                <li>Advanced user interface</li>
-                                <li>Tailored solution for users</li>
-                                <li>Time Saving: 2.5 hrs saved daily</li>
-                                <li>Cost-effective solution</li>
-                                <li>Advanced security measures</li>
-                                <li>Unlimited scope for advancements</li>
+                                <li>Enhanced efficiency with GenAI integration</li>
+                                <li>Seamless HealthMail and HealthLink Integration</li>
+                                <li>Medicine Database integration for Allergens alerts</li>
+                                <li>Advanced security measures with SSL and TLS certifications</li>
+                                <li>Cloud-based infrastructure</li>
+                                <li>Web and Mobile Application</li>
+                                <li>State-of-the-art user interface for convenience</li>
+                                <li>Saves of avg. 60% time and 50% cost</li>
+                                <li>Data analytical dashboards</li>
+                                <li>Communication & reminders</li>
                             </ul>
                         </Col>
                     </Row>
@@ -238,82 +293,75 @@ export default function Home() {
                         <Row className='g-5'>
                             <Col xs={12} className="mb-2">
                                 <div className='d-flex flex-column align-items-center text-center'>
-                                    <h2 className="mb-4">Introducing Our Expert Team</h2>
+                                    <h2 className="mb-4">Saw the Art? Meet the artists</h2>
                                 </div>
                             </Col>
                             <Col className='px-5' xs={12} md={4}>
-                                <div className='d-flex justify-content-center'>
+                                <div>
                                     <div className='team-stepper__image'>
                                         <img src="/images/team-1.png" alt="Step 1" width="100%" height="100%" />
                                     </div>
                                 </div>
-                                <div className='text-center'>
+                                <div>
                                     <div className="body-2 text-warning">Dr. Jonathan Graham</div>
                                     <div className="mb-3 body-2 text-warning">(Product and PR)</div>
                                 </div>
                                 <div>
-                                    <ul className='ps-4'>
-                                        <li>10+ yrs experienced GP in Ireland</li>
-                                        <li>35 yrs old family owned practice, New Castle</li>
-                                        <li>Treated 15,000+ patients</li>
+                                    <ul className='ps-4 h-10'>
+                                        <li>Seasoned Irish GP with Proven Medical Expertise</li>
+                                        <li>Running a 35-year-old GP practice</li>
+                                        <li>Treated over 15,000 patients</li>
                                     </ul>
                                 </div>
                                 <div className='text-start'>
-                                    <p className='body-2 mb-0'><FontAwesomeIcon className=' icon-color pe-1' icon={faPhone} />: +353 (0) 83-876-6862</p>
-                                    <p><FontAwesomeIcon className=' pe-1 icon-color' icon={faEnvelope} />: jonathan.graham@hotmail.com</p>
+                                    <p className='body-2 mb-0'><FontAwesomeIcon className=' icon-color pe-1' icon={faPhone} /> +353 (0) 83-876-6862</p>
+                                    <a href='mailto:Jonathan@pracai.eu' className='body-2 text-white text-decoration-none'><FontAwesomeIcon className=' pe-1 icon-color' icon={faEnvelope} /> Jonathan@pracai.eu</a>
                                 </div>
                             </Col>
                             <Col className='px-5' xs={12} md={4}>
-                                <div className='d-flex justify-content-center'>
+                                <div>
                                     <div className='team-stepper__image'>
                                         <img src="/images/team-2.png" alt="Step 1" width="100%" height="100%" />
                                     </div>
                                 </div>
-                                <div className='text-center'>
+                                <div>
                                     <div className="body-2 text-warning">Shailesh Sharma</div>
                                     <div className="mb-3 body-2 text-warning">(Technology)</div>
                                 </div>
                                 <div>
-                                    <ul className='ps-4'>
-                                        <li>Solution architect
-                                            Entrepreneur</li>
-                                        <li>Developed 200+ web
-                                            and Mobile Apps for
-                                            SMBs
-                                        </li>
-                                        <li>UCD MBA
-                                        </li>
+                                    <ul className='ps-4 h-10'>
+                                        <li>Solution Architect Entrepreneur</li>
+                                        <li>Engineered Web and Mobile Apps for 200+ Businesses</li>
+                                        <li>Decade of experience managing large tech teams</li>
+                                        <li>UCD MBA Alumni</li>
                                     </ul>
                                 </div>
                                 <div className='text-start'>
-                                    <p className='body-2 mb-0'><FontAwesomeIcon className=' icon-color pe-1' icon={faPhone} />: +353 (0) 83-870-7132</p>
-                                    <p><FontAwesomeIcon className=' pe-1 icon-color' icon={faEnvelope} />: shailesh.sharma@aol.com</p>
+                                    <p className='body-2 mb-0'><FontAwesomeIcon className=' icon-color pe-1' icon={faPhone} /> +353 (0) 83-870-7132</p>
+                                    <a href='mailto:shailesh@pracai.eu' className='body-2 text-white text-decoration-none'><FontAwesomeIcon className=' pe-1 icon-color' icon={faEnvelope} /> shailesh@pracai.eu</a>
                                 </div>
                             </Col>
                             <Col className='px-5' xs={12} md={4}>
-                                <div className='d-flex justify-content-center'>
+                                <div>
                                     <div className='team-stepper__image'>
                                         <img src="/images/team-3.png" alt="Step 1" width="100%" height="100%" />
                                     </div>
                                 </div>
-                                <div className='text-center'>
+                                <div>
                                     <div className="body-2 text-warning">Harsh Mangla</div>
                                     <div className="mb-3 body-2 text-warning">(Sales and Marketing)</div>
                                 </div>
                                 <div>
-                                    <ul className='ps-4'>
-                                        <li>7 yrs IT Sales
-                                            experience</li>
-                                        <li>Experience managing
-                                            ERP sales team</li>
-                                        <li>Launched & Scaled an
-                                            EV business in India</li>
-                                        <li>UCD MBA</li>
+                                    <ul className='ps-4 h-10'>
+                                        <li>IT SaaS Marketing Aficionado</li>
+                                        <li>Experience managing IT sales team</li>
+                                        <li>Built and Scaled a Successful EV Startup</li>
+                                        <li>UCD MBA Alumni</li>
                                     </ul>
                                 </div>
                                 <div className='text-start'>
-                                    <p className='body-2 mb-0'><FontAwesomeIcon className='icon-color pe-1' icon={faPhone} />: +353 (0) 89-463-2739</p>
-                                    <p><FontAwesomeIcon className='pe-1 icon-color' icon={faEnvelope} />: harshmangla95@gmail.com</p>
+                                    <p className='body-2 mb-0'><FontAwesomeIcon className='icon-color pe-1' icon={faPhone} /> +353 (0) 89-463-2739</p>
+                                    <a href='mailto:harsh@pracai.eu' className='body-2 text-white text-decoration-none'><FontAwesomeIcon className='pe-1 icon-color' icon={faEnvelope} /> harsh@pracai.eu</a>
                                 </div>
                             </Col>
                         </Row>
@@ -330,17 +378,17 @@ export default function Home() {
                     <Row className="gx-5">
                         <Col xs={12}>
                             <div className="d-flex flex-column align-items-center text-center pb-5">
-                                <div className="h2 pb-4">Discover<span className="h1 ps-2 fw-bold">Our Offerings</span></div>
+                                <div className="h2 pb-4"><span className="h1 ps-2 fw-bold">Our Offerings</span></div>
                             </div>
                         </Col>
                         <Col xs={12} md={8}>
-                            <ul style={{ fontSize: "25px", fontWeight: 500 }} className="lh-lg">
+                            <ul style={{ fontSize: "22px", fontWeight: 500 }} className="lh-lg">
                                 <Row>
                                     <Col xs={12} md={6}>
                                         <li>Data Analytics Dashboards</li>
-                                        <li>Appointment Mgt</li>
+                                        <li>Appointment Management</li>
                                         <li>Patient Information</li>
-                                        <li>E-Prescription Mgt</li>
+                                        <li>E-Prescription Management</li>
                                         <li>Clinical Workflow</li>
                                         <li>Telemedicine</li>
                                     </Col>
@@ -348,7 +396,7 @@ export default function Home() {
                                         <li>AI-driven Admin Automation</li>
                                         <li>API Integration</li>
                                         <li>Payments & Billing</li>
-                                        <li>Inventory</li>
+                                        <li>Inventory Management</li>
                                         <li>Patient Portal</li>
                                         <li>Communications</li>
                                     </Col>

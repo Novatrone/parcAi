@@ -4,11 +4,13 @@ import Footer from '../footer/footer';
 import { useScroll } from '../../context/scrollContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 export default function MainLayout({ children }) {
     const [show, setShow] = useState(false);
     const [showScrollUp, setShowScrollUp] = useState(false);
     const { scrollTo } = useScroll();
+    const navigate = useNavigate()
 
     const handleClick = (id) => {
         console.log("id: ", id);
@@ -41,8 +43,8 @@ export default function MainLayout({ children }) {
     return (
         <Col>
             <Navbar expand="lg" variant="light" className="main-navbar">
-                <Col className="navigation__logo-wrapper">
-                    <img src="/images/Logo.png" width="140" style={{ objectFit: "contain" }} alt="logo" className="navigation__logo" />
+                <Col onClick={() => navigate('/')} className="navigation__logo-wrapper">
+                    <img src="/images/Logo-fill-light.png" width="200" style={{ objectFit: "contain" }} alt="logo" className="navigation__logo" />
                 </Col>
                 <>
                     <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={toggleOffcanvas} />
@@ -59,14 +61,17 @@ export default function MainLayout({ children }) {
                                     <Nav.Link onClick={() => handleClick('our_team')}>Our Team</Nav.Link>
                                 </Nav.Item>
                                 <Nav.Item>
-                                    <Button onClick={() => handleClick('contact_us')} size='lg' variant='primary'>Contact us</Button>
+                                    <Nav.Link onClick={() => navigate('/offerings')}>Offering</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Button onClick={() => navigate('/contact-us')} size='lg' variant='primary'>Contact Us</Button>
                                 </Nav.Item>
                             </Nav>
                         </Offcanvas.Body>
                     </Offcanvas>
                 </>
                 <Container className='d-flex justify-content-end d-none d-sm-block'>
-                    <Nav style={{ fontSize: "18px", columnGap: "50px", fontFamily: "Be Vietnam Pro" }} className="justify-content-end" activeKey="/home">
+                    <Nav style={{ fontSize: "18px", columnGap: "50px", fontWeight: 600 }} className="justify-content-end" activeKey="/home">
                         <Nav.Item>
                             <Nav.Link onClick={() => handleClick('faq')}>FAQs</Nav.Link>
                         </Nav.Item>
@@ -74,7 +79,10 @@ export default function MainLayout({ children }) {
                             <Nav.Link onClick={() => handleClick('our_team')}>Our Team</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Button onClick={() => handleClick('contact_us')} size='lg' variant='primary'>Contact us</Button>
+                            <Nav.Link onClick={() => navigate('/offerings')}>Offering</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Button onClick={() => navigate('/contact-us')} size='lg' variant='primary'>Contact Us</Button>
                         </Nav.Item>
                     </Nav>
                 </Container>

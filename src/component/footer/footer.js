@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 
-export default function Footer({handleClick}) {
+export default function Footer({ handleClick }) {
     return (
         <div className="back-blue-1 section_stepper text-white">
             <Container>
@@ -13,10 +13,25 @@ export default function Footer({handleClick}) {
                         <div className='d-flex justify-content-center'>
                             <ul className="list-inline body-1 lh-lg fw-border">
                                 <li className="menu-item">
-                                    <a onClick={() => handleClick('faq')} className='text-white text-decoration-none me-4' rel="privacy-policy" href="/">Faq</a>
+                                    <span role="button" onClick={() => handleClick('faq')} className='text-white'>Faq</span>
                                 </li>
                                 <li className="menu-item">
-                                    <a className='text-white text-decoration-none' href="/">Contact Us</a>
+                                    <span role="button" onClick={() => handleClick('contact_us')} className='text-white'>Contact Us</span>
+                                </li>
+                                <li className="menu-item">
+                                    <span role="button" onClick={() => handleClick('sales_strategy')} className='text-white'>Sales Strategy</span>
+                                </li>
+                                <li className="menu-item">
+                                    <span role="button" onClick={() => handleClick('solution')} className='text-white'>Solution</span>
+                                </li>
+                                <li className="menu-item">
+                                    <span role="button" onClick={() => handleClick('our_team')} className='text-white'>Meet the artists</span>
+                                </li>
+                                <li className="menu-item">
+                                    <span role="button" onClick={() => handleClick('Offerings')} className='text-white'>Our Offerings</span>
+                                </li>
+                                <li className="menu-item">
+                                    <span role="button" onClick={() => handleClick('overview')} className='text-white'>Overview</span>
                                 </li>
                             </ul>
                         </div>
@@ -50,6 +65,11 @@ export default function Footer({handleClick}) {
                                     rel="noopener noreferrer"
                                 >
                                     <img src="/images/linked_in.png" width={60} alt='LinkedIn' />
+                                </a>
+                            </div>
+                            <div className='py-2'>
+                                <a href="mailto:info@pracai.eu" className="text-white text-decoration-none">
+                                    info@pracai.eu
                                 </a>
                             </div>
                             <div className='d-flex justify-content-end'>
