@@ -4,13 +4,15 @@ import Footer from '../footer/footer';
 import { useScroll } from '../../context/scrollContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function MainLayout({ children }) {
     const [show, setShow] = useState(false);
     const [showScrollUp, setShowScrollUp] = useState(false);
     const { scrollTo } = useScroll();
     const navigate = useNavigate()
+    const location = useLocation();
+    const pathname = location.pathname;
 
     const handleClick = (id) => {
         console.log("id: ", id);
@@ -44,7 +46,7 @@ export default function MainLayout({ children }) {
         <Col>
             <Navbar expand="lg" variant="light" className="main-navbar">
                 <Col onClick={() => navigate('/')} className="navigation__logo-wrapper">
-                    <img src="/images/Logo-fill-light.png" width="200" style={{ objectFit: "contain" }} alt="logo" className="navigation__logo" />
+                    <img src="/images/Logo-fill-light.png" width="160" style={{ objectFit: "contain" }} alt="logo" className="navigation__logo" />
                 </Col>
                 <>
                     <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={toggleOffcanvas} />
@@ -54,12 +56,15 @@ export default function MainLayout({ children }) {
                         </Offcanvas.Header>
                         <Offcanvas.Body>
                             <Nav className="justify-content-end flex-grow-1 pe-3">
-                                <Nav.Item>
-                                    <Nav.Link onClick={() => handleClick('faq')}>FAQs</Nav.Link>
-                                </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link onClick={() => handleClick('our_team')}>Our Team</Nav.Link>
-                                </Nav.Item>
+                                {pathname === '/' &&
+                                    <>
+                                        <Nav.Item>
+                                            <Nav.Link onClick={() => handleClick('faq')}>FAQs</Nav.Link>
+                                        </Nav.Item>
+                                        <Nav.Item>
+                                            <Nav.Link onClick={() => handleClick('our_team')}>Our Team</Nav.Link>
+                                        </Nav.Item>
+                                    </>}
                                 <Nav.Item>
                                     <Nav.Link onClick={() => navigate('/offerings')}>Offering</Nav.Link>
                                 </Nav.Item>
@@ -72,12 +77,16 @@ export default function MainLayout({ children }) {
                 </>
                 <Container className='d-flex justify-content-end d-none d-sm-block'>
                     <Nav style={{ fontSize: "18px", columnGap: "50px", fontWeight: 600 }} className="justify-content-end" activeKey="/home">
-                        <Nav.Item>
-                            <Nav.Link onClick={() => handleClick('faq')}>FAQs</Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link onClick={() => handleClick('our_team')}>Our Team</Nav.Link>
-                        </Nav.Item>
+                        {pathname === '/' &&
+                            <>
+                                <Nav.Item>
+                                    <Nav.Link onClick={() => handleClick('faq')}>FAQs</Nav.Link>
+                                </Nav.Item>
+                                <Nav.Item>
+                                    <Nav.Link onClick={() => handleClick('our_team')}>Our Team</Nav.Link>
+                                </Nav.Item>
+                            </>
+                        }
                         <Nav.Item>
                             <Nav.Link onClick={() => navigate('/offerings')}>Offering</Nav.Link>
                         </Nav.Item>

@@ -2,8 +2,11 @@ import React from 'react'
 import { Accordion, Button, Card, Col, Container, Row } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router-dom'
 
 export default function Home() {
+    const navigate = useNavigate()
+
     return (
         <>
             <div id="go_to_top" className="hero-home">
@@ -22,13 +25,13 @@ export default function Home() {
                                 Doctors, Enhancing Efficiency
                             </h2>
                             <div className='pt-3 pb-4 text-center text-lg-start'>
-                                <h5>Let your patients make it easy for themselves to book a GP appointment and refill their medicines from the internet. This method does not only help in saving time and simplifying tasks but also reduces the pressure on practice phone lines thus creating efficient GPs’ offices while making patients feel like they are in control of their health.</h5>
+                                <h5>Integrated Generative AI solution that saves doctors an average of 2.5 hours per day by automating note-taking, referrals, analyzing patient health data, and providing intelligent recommendations. Enhance efficiency, reduce administrative burdens, and boost patient engagement</h5>
                             </div>
                             <div className='d-flex gap-4'>
                                 {/* <button className='hero_button'>
                                     <span>Contact Us</span>
                                 </button> */}
-                                <Button size='lg'>Contact Us</Button>
+                                <Button onClick={() => navigate('/contact-us')} size='lg'>Contact Us</Button>
                             </div>
                         </Col>
                         <Col md={5} lg={4} xl={5}>
@@ -57,10 +60,9 @@ export default function Home() {
                     <Container>
                         <Row>
                             <Col xs={12} md={6} className=" mb-5">
-                                <h2 className="mb-4">Our Product and Sales Strategy</h2>
+                                <h2 className="mb-2">Your Practice, Your System</h2>
                                 <p className="body-2 lilac-3">
-                                    Your Practice, Your System: Co-Create Your AI Healthcare System to
-                                    fit your needs
+                                    Co-Create Your AI Healthcare System to fit your needs
                                 </p>
                             </Col>
                         </Row>
@@ -97,7 +99,7 @@ export default function Home() {
                             </Col>
                             <Col xs={12} md={3}>
                                 <div className='three-col-stepper__image'>
-                                    <img src="/images/payment.jpg" alt="Step 4" width="100%" height="100%" />
+                                    <img src="/images/reap_the_reward.png" alt="Step 4" width="100%" height="100%" />
                                 </div>
                                 <div>
                                     <div className="mb-3 body-2 text-warning">Step 4</div>
@@ -107,7 +109,7 @@ export default function Home() {
                             </Col>
                             <Col xs={12}>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <Button size='lg'>Register your interest</Button>
+                                    <Button onClick={() => navigate('/contact-us')} size='lg'>Register your interest</Button>
                                 </div>
                             </Col>
                         </Row>
@@ -124,7 +126,7 @@ export default function Home() {
                     <Row className='gx-5'>
                         <Col xs={12}>
                             <div className='d-flex flex-column align-items-center text-center pb-5'>
-                                <div className="h2 pb-4">Foundation<span className='h1 ps-2 fw-bold'> of Success</span></div>
+                                <div className="h2 pb-4"><span className='h1 ps-2 fw-bold'>Foundation of Success</span></div>
                                 <p style={{ maxWidth: "70%" }} className='body-2 pb-3'>
                                     A new and advanced AI-powered cloud-based practice management system that revolutionizes healthcare operations. Smoothly integrate appointments, record patients’ information, health reports, and connect to doctors with a user-friendly platform that you can use whenever and wherever.
                                 </p>
@@ -243,7 +245,7 @@ export default function Home() {
                                         Discover ways to maximize efficiencies, streamline workflows, and empower your patients for an enhanced healthcare
                                         experience.
                                     </p>
-                                    <Button size='lg'>Get in touch</Button>
+                                    <Button onClick={() => navigate('/contact-us')} size='lg'>Get in touch</Button>
                                 </div>
                             </Col>
                         </Row>
@@ -260,7 +262,7 @@ export default function Home() {
                     <Row className="gx-5">
                         <Col xs={12}>
                             <div className='d-flex flex-column align-items-center text-center pb-5'>
-                                <div className="h2 pb-4">The<span className="h1 ps-2 fw-bold">PracAi</span> Solution !</div>
+                                <div className="h2 pb-4"><span className="h1 ps-2 fw-bold">The PracAi Solution !</span> </div>
                             </div>
                         </Col>
                         <Col xs={12} md={6}>
@@ -286,7 +288,7 @@ export default function Home() {
 
             <div id="our_team" className='site-team'>
                 <div>
-                    <img className="w-100" src="/images/Homepage-trim-3.svg" alt="shapes" width="100%" height="100%" />
+                    <img className="w-100 -mb-2" src="/images/Homepage-trim-3.svg" alt="shapes" width="100%" height="100%" />
                 </div>
                 <div className="back-blue-1 section_stepper text-white">
                     <Container>
@@ -296,74 +298,71 @@ export default function Home() {
                                     <h2 className="mb-4">Saw the Art? Meet the artists</h2>
                                 </div>
                             </Col>
-                            <Col className='px-5' xs={12} md={4}>
-                                <div>
-                                    <div className='team-stepper__image'>
-                                        <img src="/images/team-1.png" alt="Step 1" width="100%" height="100%" />
-                                    </div>
+                            <Col className='px-5 d-flex flex-column align-items-center text-center' xs={12} md={4}>
+                                <div className='team-stepper__image mb-3'>
+                                    <img src="/images/team-1.png" alt="Dr. Jonathan Graham" width="100%" height="100%" />
                                 </div>
                                 <div>
                                     <div className="body-2 text-warning">Dr. Jonathan Graham</div>
                                     <div className="mb-3 body-2 text-warning">(Product and PR)</div>
                                 </div>
                                 <div>
-                                    <ul className='ps-4 h-10'>
-                                        <li>Seasoned Irish GP with Proven Medical Expertise</li>
-                                        <li>Running a 35-year-old GP practice</li>
-                                        <li>Treated over 15,000 patients</li>
+                                    <ul className='h-10 list-unstyled'>
+                                        <li className='pb-2'>Seasoned Irish GP with Proven Medical Expertise</li>
+                                        <li className='pb-2'>Running a 35-year-old GP practice</li>
+                                        <li className='pb-2'>Treated over 15,000 patients</li>
                                     </ul>
                                 </div>
                                 <div className='text-start'>
-                                    <p className='body-2 mb-0'><FontAwesomeIcon className=' icon-color pe-1' icon={faPhone} /> +353 (0) 83-876-6862</p>
-                                    <a href='mailto:Jonathan@pracai.eu' className='body-2 text-white text-decoration-none'><FontAwesomeIcon className=' pe-1 icon-color' icon={faEnvelope} /> Jonathan@pracai.eu</a>
+                                    <a href='tel:+3530838766862' className='body-2 d-block mb-0 text-white text-decoration-none'><FontAwesomeIcon className='icon-color pe-1' icon={faPhone} /> +353 (0) 83-876-6862</a>
+                                    <a href='mailto:Jonathan@pracai.eu' className='body-2 d-block text-white text-decoration-none'><FontAwesomeIcon className='pe-1 icon-color' icon={faEnvelope} /> Jonathan@pracai.eu</a>
                                 </div>
                             </Col>
-                            <Col className='px-5' xs={12} md={4}>
-                                <div>
-                                    <div className='team-stepper__image'>
-                                        <img src="/images/team-2.png" alt="Step 1" width="100%" height="100%" />
-                                    </div>
+
+                            <Col className='px-5 d-flex flex-column align-items-center text-center' xs={12} md={4}>
+                                <div className='team-stepper__image mb-3'>
+                                    <img src="/images/team-2.png" alt="Shailesh Sharma" width="100%" height="100%" />
                                 </div>
                                 <div>
                                     <div className="body-2 text-warning">Shailesh Sharma</div>
                                     <div className="mb-3 body-2 text-warning">(Technology)</div>
                                 </div>
                                 <div>
-                                    <ul className='ps-4 h-10'>
-                                        <li>Solution Architect Entrepreneur</li>
-                                        <li>Engineered Web and Mobile Apps for 200+ Businesses</li>
-                                        <li>Decade of experience managing large tech teams</li>
-                                        <li>UCD MBA Alumni</li>
+                                    <ul className='h-10 list-unstyled'>
+                                        <li className='pb-2'>Solution Architect Entrepreneur</li>
+                                        <li className='pb-2'>Engineered Web and Mobile Apps for 200+ Businesses</li>
+                                        <li className='pb-2'>Decade of experience managing large tech teams</li>
+                                        <li className='pb-2'>UCD MBA Alumnus</li>
                                     </ul>
                                 </div>
                                 <div className='text-start'>
-                                    <p className='body-2 mb-0'><FontAwesomeIcon className=' icon-color pe-1' icon={faPhone} /> +353 (0) 83-870-7132</p>
-                                    <a href='mailto:shailesh@pracai.eu' className='body-2 text-white text-decoration-none'><FontAwesomeIcon className=' pe-1 icon-color' icon={faEnvelope} /> shailesh@pracai.eu</a>
+                                    <a href='tel:+3530838707132' className='body-2 d-block mb-0 text-white text-decoration-none'><FontAwesomeIcon className='icon-color pe-1' icon={faPhone} /> +353 (0) 83-870-7132</a>
+                                    <a href='mailto:shailesh@pracai.eu' className='body-2 d-block text-white text-decoration-none'><FontAwesomeIcon className='pe-1 icon-color' icon={faEnvelope} /> shailesh@pracai.eu</a>
                                 </div>
                             </Col>
-                            <Col className='px-5' xs={12} md={4}>
-                                <div>
-                                    <div className='team-stepper__image'>
-                                        <img src="/images/team-3.png" alt="Step 1" width="100%" height="100%" />
-                                    </div>
+
+                            <Col className='px-5 d-flex flex-column align-items-center text-center' xs={12} md={4}>
+                                <div className='team-stepper__image mb-3'>
+                                    <img src="/images/team-3.png" alt="Harsh Mangla" width="100%" height="100%" />
                                 </div>
                                 <div>
                                     <div className="body-2 text-warning">Harsh Mangla</div>
                                     <div className="mb-3 body-2 text-warning">(Sales and Marketing)</div>
                                 </div>
                                 <div>
-                                    <ul className='ps-4 h-10'>
-                                        <li>IT SaaS Marketing Aficionado</li>
-                                        <li>Experience managing IT sales team</li>
-                                        <li>Built and Scaled a Successful EV Startup</li>
-                                        <li>UCD MBA Alumni</li>
+                                    <ul className='h-10 list-unstyled'>
+                                        <li className='pb-2'>IT SaaS Marketing Aficionado</li>
+                                        <li className='pb-2'>Experience managing IT sales team</li>
+                                        <li className='pb-2'>Built and Scaled a Successful EV Startup</li>
+                                        <li className='pb-2'>UCD MBA Alumnus</li>
                                     </ul>
                                 </div>
                                 <div className='text-start'>
-                                    <p className='body-2 mb-0'><FontAwesomeIcon className='icon-color pe-1' icon={faPhone} /> +353 (0) 89-463-2739</p>
+                                    <a href='tel:+3530894632739' className='body-2 d-block mb-0 text-white text-decoration-none'><FontAwesomeIcon className='icon-color pe-1' icon={faPhone} /> +353 (0) 89-463-2739</a>
                                     <a href='mailto:harsh@pracai.eu' className='body-2 text-white text-decoration-none'><FontAwesomeIcon className='pe-1 icon-color' icon={faEnvelope} /> harsh@pracai.eu</a>
                                 </div>
                             </Col>
+
                         </Row>
                     </Container>
                 </div>
@@ -373,12 +372,12 @@ export default function Home() {
                 </div>
             </div>
 
-            <div id="Offerings" className='blue_bottom_stepper'>
+            {/* <div id="Offerings" className='blue_bottom_stepper'>
                 <Container>
                     <Row className="gx-5">
                         <Col xs={12}>
                             <div className="d-flex flex-column align-items-center text-center pb-5">
-                                <div className="h2 pb-4"><span className="h1 ps-2 fw-bold">Our Offerings</span></div>
+                                <div className="h2 pb-4"><span className="h1 ps-2 fw-bold">Offerings</span></div>
                             </div>
                         </Col>
                         <Col xs={12} md={8}>
@@ -408,9 +407,61 @@ export default function Home() {
                         </Col>
                     </Row>
                 </Container>
+            </div> */}
+
+            <div id="faq" className='blue_bottom_stepper'>
+                <Container>
+                    <Row className="gx-5">
+                        <Col xs={12}>
+                            <div className="d-flex flex-column align-items-center text-center pb-5">
+                                <div className="h2 pb-4"><span className="h1 ps-2 fw-bold">Faq</span></div>
+                            </div>
+                        </Col>
+                        <Col xs={12} className="mb-2">
+                            <Accordion className='w-100 custom-accordion'>
+                                <Accordion.Item eventKey="0">
+                                    <Accordion.Header>1. What is ThePracAi Solution?</Accordion.Header>
+                                    <Accordion.Body>
+                                        ThePracAi Solution is a cutting-edge, AI-driven, cloud-based practice management system designed to transform healthcare operations. It streamlines appointments, patient records, health reports, and physician communication through an intuitive platform accessible anytime, anywhere.
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey="1">
+                                    <Accordion.Header>2. How does ThePracAi Solution enhance efficiency?</Accordion.Header>
+                                    <Accordion.Body>
+                                        By leveraging GenAI, ThePracAi Solution saves up to 2.5 hours daily, allowing healthcare providers to focus more on patient care and less on administrative tasks.
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey="2">
+                                    <Accordion.Header>3. How does ThePracAi Solution ensure data security?</Accordion.Header>
+                                    <Accordion.Body>
+                                        ThePracAi Solution employs advanced security measures to protect sensitive patient information and ensure compliance with healthcare regulations.
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey="3">
+                                    <Accordion.Header>4. Is ThePracAi Solution customizable for different healthcare practices?</Accordion.Header>
+                                    <Accordion.Body>
+                                        Yes, ThePracAi Solution offers tailored solutions to meet the specific needs of different healthcare practices, ensuring it fits seamlessly into existing workflows.
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey="4">
+                                    <Accordion.Header>5. How does ThePracAi Solution support advancements in healthcare operations?</Accordion.Header>
+                                    <Accordion.Body>
+                                        ThePracAi Solution is built on a cloud-based architecture with unlimited scope for advancements, allowing it to evolve with the ever-changing landscape of healthcare technology.
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                                <Accordion.Item eventKey="5">
+                                    <Accordion.Header>6. What makes ThePracAi Solution cost-effective?</Accordion.Header>
+                                    <Accordion.Body>
+                                        By automating routine tasks, reducing manual errors, and saving time, ThePracAi Solution helps healthcare practices reduce operational costs while improving efficiency.
+                                    </Accordion.Body>
+                                </Accordion.Item>
+                            </Accordion>
+                        </Col>
+                    </Row>
+                </Container>
             </div>
 
-            <div id="faq" className='site-content'>
+            {/* <div id="faq" className='site-content'>
                 <div>
                     <img className="w-100" src="/images/Homepage-trim-3.svg" alt="shapes" width="100%" height="100%" />
                 </div>
@@ -420,7 +471,7 @@ export default function Home() {
                             <Col xs={12} className="mb-2">
                                 <div className='d-flex flex-column align-items-center text-center'>
                                     <div className="h2 pb-4">
-                                        <div>Explore<span class="h1 ps-2 fw-bold">Our FAQs</span></div>
+                                        <div><span class="h1 ps-2 fw-bold">FAQs</span></div>
                                     </div>
                                     <Accordion className='w-100 custom-accordion'>
                                         <Accordion.Item eventKey="0">
@@ -464,13 +515,8 @@ export default function Home() {
                         </Row>
                     </Container>
                 </div>
-                {/* <div className="w-100"></div> */}
                 <hr className='m-0' />
-                {/* <div className='section_stepper_bottom'>
-                    <img style={{ transform: "scale(-1)" }} className="w-100 fix_border_top" src="/images/Homepage-trim-3.svg" alt="shapes" width="100%" height="100%" />
-                    <img class="position-absolute top-0 start-0 fix_border_top" src="/images/Homepage-trim-2.svg" alt="" width="100%" />
-                </div> */}
-            </div>
+            </div> */}
 
         </>
     )

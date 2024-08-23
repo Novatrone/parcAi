@@ -130,15 +130,12 @@ export default function ContactUs() {
                 </Container>
                 <div className="hero-contact__image-wrapper">
                     <img
-                        src="https://pippo.ie/wp-content/uploads/2022/10/contact-phone-block.svg"
+                        src="/images/contact-phone-block.svg"
                         alt="shapes"
                         width="100%"
                         height="100%"
                     />
                 </div>
-            </div>
-            <div className="pippo-footer__image-wrapper">
-                <img className="pippo-footer__image" src="https://pippo.ie/wp-content/uploads/2022/10/other-screen-footer-trim.svg" alt="shapes" width="100%" />
             </div>
         </>
     );
