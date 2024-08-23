@@ -349,29 +349,18 @@ h5 {
 /* css for offering */
 
 .offering-card {
-  margin-top: 20px;
   transition: transform 0.3s ease-in-out;
-  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
 }
 
 .offering-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border: 2px solid transparent;
-  background-image: linear-gradient(white, white),
-    linear-gradient(45deg, #ff0099, #493240);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
+background-color: #d3d3d32e;
 }
 
-.offering-card img {
-  /* border-top-left-radius: 10px;
-  border-top-right-radius: 10px; */
-  max-height: 200px; /* You can adjust this as needed */
+/* .offering-card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  max-height: 200px;
   object-fit: cover;
 }
 
@@ -395,4 +384,4 @@ h5 {
   color: #666;
   flex-grow: 1;
   margin-bottom: 0;
-}
+} */
