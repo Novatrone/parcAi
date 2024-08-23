@@ -14,7 +14,13 @@ export default function Footer({ handleClick }) {
                 <Container>
                     <Row className='gx-2 pt-5'>
                         <Col xs={6} md={4}>
-                            <img src="/images/Logo.png" width={200} alt="logo" />
+                            <div
+                                onClick={() => navigate('/')}
+                                style={{ cursor: 'pointer' }}
+                                className='logo-container'
+                            >
+                                <img src="/images/Logo.png" width={200} alt="logo" />
+                            </div>
                         </Col>
                         <Col xs={6} md={4}>
                             <div className='d-flex justify-content-center'>
