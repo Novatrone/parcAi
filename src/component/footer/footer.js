@@ -1,9 +1,11 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 export default function Footer({ handleClick }) {
     const navigate = useNavigate()
+    const location = useLocation();
+    const pathname = location.pathname;
 
     return (
         <>
@@ -31,21 +33,25 @@ export default function Footer({ handleClick }) {
                                     <li className="menu-item">
                                         <span role="button" onClick={() => navigate('/offerings')} className='text-white'>Offerings</span>
                                     </li>
-                                    <li className="menu-item">
-                                        <span role="button" onClick={() => handleClick('sales_strategy')} className='text-white'>Sales Strategy</span>
-                                    </li>
-                                    <li className="menu-item">
-                                        <span role="button" onClick={() => handleClick('solution')} className='text-white'>Solution</span>
-                                    </li>
-                                    <li className="menu-item">
-                                        <span role="button" onClick={() => handleClick('our_team')} className='text-white'>Meet the artists</span>
-                                    </li>
-                                    <li className="menu-item">
-                                        <span role="button" onClick={() => handleClick('overview')} className='text-white'>Overview</span>
-                                    </li>
-                                    <li className="menu-item">
-                                        <span role="button" onClick={() => handleClick('faq')} className='text-white'>Faq</span>
-                                    </li>
+                                    {pathname === '/' &&
+                                        <>
+                                            <li className="menu-item">
+                                                <span role="button" onClick={() => handleClick('sales_strategy')} className='text-white'>Sales Strategy</span>
+                                            </li>
+                                            <li className="menu-item">
+                                                <span role="button" onClick={() => handleClick('solution')} className='text-white'>Solution</span>
+                                            </li>
+                                            <li className="menu-item">
+                                                <span role="button" onClick={() => handleClick('our_team')} className='text-white'>Meet the artists</span>
+                                            </li>
+                                            <li className="menu-item">
+                                                <span role="button" onClick={() => handleClick('overview')} className='text-white'>Overview</span>
+                                            </li>
+                                            <li className="menu-item">
+                                                <span role="button" onClick={() => handleClick('faq')} className='text-white'>Faq</span>
+                                            </li>
+                                        </>
+                                    }
                                 </ul>
                             </div>
                         </Col>
