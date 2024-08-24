@@ -5,6 +5,8 @@ import { useScroll } from '../../context/scrollContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
+
 
 export default function MainLayout({ children }) {
     const [show, setShow] = useState(false);
@@ -13,6 +15,8 @@ export default function MainLayout({ children }) {
     const navigate = useNavigate();
     const location = useLocation();
     const pathname = location.pathname;
+
+    const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
 
     const handleClick = (id) => {
         scrollTo(id);
@@ -48,17 +52,20 @@ export default function MainLayout({ children }) {
 
     return (
         <>
-            <Navbar expand="lg" variant="light" className="main-navbar">
+            <Navbar sticky={isMobile ? "top" : "none"} expand="lg" variant="light" className="main-navbar">
                 <Col onClick={() => navigate('/')} className="navigation__logo-wrapper">
                     <img src="/images/Logo-fill-light.png" width="160" style={{ objectFit: "contain" }} alt="logo" className="navigation__logo" />
                 </Col>
                 <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={toggleOffcanvas} />
                 <Offcanvas show={show} onHide={closeOffcanvas} placement="start">
                     <Offcanvas.Header closeButton>
-                        <Offcanvas.Title>Menu</Offcanvas.Title>
+                        {/* <Offcanvas.Title>Menu</Offcanvas.Title> */}
                     </Offcanvas.Header>
-                    <Offcanvas.Body>
-                        <Nav className="justify-content-end flex-grow-1 pe-3">
+                    <Offcanvas.Body className='d-flex flex-column'>
+                        <div className='pb-3'>
+                            <img src="/images/Logo-fill-light.png" width="180" style={{ objectFit: "contain" }} alt="logo" className="navigation__logo" />
+                        </div>
+                        <Nav className="flex-grow-1 ps-3 pe-3">
                             {pathname === '/' &&
                                 <>
                                     <Nav.Item>
@@ -72,7 +79,7 @@ export default function MainLayout({ children }) {
                                 <Nav.Link onClick={() => navigate('/offerings')}>Offering</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Button onClick={() => navigate('/contact-us')} size='lg' variant='primary'>Contact Us</Button>
+                                <Button className='mt-3' onClick={() => navigate('/contact-us')} size='lg' variant='primary'>Contact Us</Button>
                             </Nav.Item>
                         </Nav>
                     </Offcanvas.Body>

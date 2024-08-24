@@ -247,7 +247,7 @@ export default function Home() {
 
             <div id="solution" className='blue_bottom_stepper'>
                 <Container>
-                    <Row className="gx-5">
+                    <Row>
                         <Col xs={12}>
                             <div className='d-flex flex-column align-items-center text-center pb-5'>
                                 <div className="h2 pb-4"><span className="h1 ps-2 fw-bold">The PracAi Solution !</span> </div>
