@@ -16,8 +16,8 @@ export default function Footer({ handleClick }) {
             </div>
             <div className="back-blue-1 section_stepper text-white">
                 <Container>
-                    <Row className='gx-2 pt-5'>
-                        <Col xs={6} md={4}>
+                    <Row className='gx-2 gy-4 pt-2 pt-md-5'>
+                        <Col xs={12} md={4} className='text-center text-md-start'>
                             <div
                                 onClick={() => navigate('/')}
                                 style={{ cursor: 'pointer' }}
@@ -26,8 +26,8 @@ export default function Footer({ handleClick }) {
                                 <img src="/images/Logo.png" width={200} alt="logo" />
                             </div>
                         </Col>
-                        <Col xs={6} md={4}>
-                            <div className='d-flex justify-content-center'>
+                        <Col xs={12} md={4}>
+                            <div className='d-flex justify-content-center text-center text-md-start'>
                                 <ul className="list-inline body-1 lh-lg fw-border">
                                     <li className="menu-item active">
                                         <span role="button" onClick={() => navigate('/contact-us')} className='text-white'>Contact Us</span>

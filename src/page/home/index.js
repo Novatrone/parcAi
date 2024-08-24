@@ -13,31 +13,19 @@ export default function Home() {
                 <Container>
                     <Row>
                         <Col md={7} xl={6} className='py-5'>
-                            <h2
-                                style={{
-                                    fontSize: "35px",
-                                    lineHeight: 1.3,
-                                    letterSpacing: -0.1
-                                }}
-                                className="responsive-heading"
-                            >
+                            <h2 className="responsive-heading">
                                 Revolutionize Healthcare with Generative AI: Empowering
                                 Doctors, Enhancing Efficiency
                             </h2>
                             <div className='pt-3 pb-4 text-center text-lg-start'>
                                 <h5>Integrated Generative AI solution that saves doctors an average of 2.5 hours per day by automating note-taking, referrals, analyzing patient health data, and providing intelligent recommendations. Enhance efficiency, reduce administrative burdens, and boost patient engagement</h5>
                             </div>
-                            <div className='d-flex gap-4'>
-                                {/* <button className='hero_button'>
-                                    <span>Contact Us</span>
-                                </button> */}
+                            <div className='d-flex gap-4 justify-content-center justify-content-lg-start'>
                                 <Button onClick={() => navigate('/contact-us')} size='lg'>Contact Us</Button>
                             </div>
                         </Col>
                         <Col md={5} lg={4} xl={5}>
                             <Card className='frame_content'>
-                                {/* <img style={{ padding: "12px" }} className="w-100" alt="phone-frame" src="/images/image.png" /> */}
-                                {/* <img className='hero-home__phone-frame' alt="phone-frame" src="/images/iphone-cutout.png" /> */}
                                 <img style={{ padding: "16px", height: "240px" }} alt="phone-frame" src="/images/screenshot_1.png" />
                                 <img className='hero-home__phone-frame' alt="phone-frame" src="/images/apple_monitor.png" />
                             </Card>
@@ -60,8 +48,8 @@ export default function Home() {
                     <Container>
                         <Row>
                             <Col xs={12} md={6} className=" mb-5">
-                                <h2 className="mb-2">Your Practice, Your System</h2>
-                                <p className="body-2 lilac-3">
+                                <h2 className="mb-2 text-center text-md-start">Your Practice, Your System</h2>
+                                <p className="body-2 lilac-3 text-center text-md-start">
                                     Co-Create Your AI Healthcare System to fit your needs
                                 </p>
                             </Col>
@@ -123,9 +111,9 @@ export default function Home() {
 
             <div id="overview" className='blue_bottom_stepper'>
                 <Container>
-                    <Row className='gx-5'>
+                    <Row className='g-3'>
                         <Col xs={12}>
-                            <div className='d-flex flex-column align-items-center text-center pb-5'>
+                            <div className='d-flex flex-column align-items-center text-center pb-0 pb-md-5'>
                                 <div className="h2 pb-4"><span className='h1 ps-2 fw-bold'>Foundation of Success</span></div>
                                 <p className='body-2 pb-3 mw-85'>
                                     A new and advanced AI-powered cloud-based practice management system that revolutionizes healthcare operations. Smoothly integrate appointments, record patients’ information, health reports, and connect to doctors with a user-friendly platform that you can use whenever and wherever.
