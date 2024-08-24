@@ -127,7 +127,7 @@ export default function Home() {
                         <Col xs={12}>
                             <div className='d-flex flex-column align-items-center text-center pb-5'>
                                 <div className="h2 pb-4"><span className='h1 ps-2 fw-bold'>Foundation of Success</span></div>
-                                <p style={{ maxWidth: "70%" }} className='body-2 pb-3'>
+                                <p className='body-2 pb-3 mw-85'>
                                     A new and advanced AI-powered cloud-based practice management system that revolutionizes healthcare operations. Smoothly integrate appointments, record patients’ information, health reports, and connect to doctors with a user-friendly platform that you can use whenever and wherever.
                                 </p>
                             </div>
@@ -137,7 +137,7 @@ export default function Home() {
                                 <div className='card_inner'>
                                     <div className='card_front'>
                                         <h5>01</h5>
-                                        <div>
+                                        <div className='card_image'>
                                             <img src="/images/time_saving.png" alt='time-saving' width="100%" />
                                         </div>
                                         <h4 className='text-center'>Time Saving</h4>
@@ -161,7 +161,7 @@ export default function Home() {
                                 <div className='card_inner'>
                                     <div className='card_front'>
                                         <h5>02</h5>
-                                        <div>
+                                        <div className='card_image'>
                                             <img src="/images/cost-saving.png" alt='cost-saving' width="100%" />
                                         </div>
                                         <h4 className='text-center'>Cost Saving</h4>
@@ -184,7 +184,7 @@ export default function Home() {
                                 <div className='card_inner'>
                                     <div className='card_front'>
                                         <h5>03</h5>
-                                        <div>
+                                        <div className='card_image'>
                                             <img src="/images/security.png" alt='security' width="100%" />
                                         </div>
                                         <h4 className='text-center'>Security</h4>
@@ -207,7 +207,7 @@ export default function Home() {
                                 <div className='card_inner'>
                                     <div className='card_front'>
                                         <h5>04</h5>
-                                        <div>
+                                        <div className='card_image'>
                                             <img src="/images/convenience.png" alt='convenience' width="100%" />
                                         </div>
                                         <h4 className='text-center'>Convenience</h4>
@@ -240,7 +240,7 @@ export default function Home() {
                             <Col xs={12} className="mb-2">
                                 <div className='d-flex flex-column align-items-center text-center'>
                                     <h2 className="mb-4">Elevate Your GP Practice for Peak Performance and Care</h2>
-                                    <p className="body-2 lilac-3 mb-5" style={{ maxWidth: "70%" }}>
+                                    <p className="body-2 lilac-3 mb-5 mw-85">
                                         Unlock the full potential of your practice with our AI-driven, integrated, user-friendly practice management system.
                                         Discover ways to maximize efficiencies, streamline workflows, and empower your patients for an enhanced healthcare
                                         experience.
@@ -292,13 +292,13 @@ export default function Home() {
                 </div>
                 <div className="back-blue-1 section_stepper text-white">
                     <Container>
-                        <Row className='g-5'>
+                        <Row className='g-2 g-md-5'>
                             <Col xs={12} className="mb-2">
                                 <div className='d-flex flex-column align-items-center text-center'>
                                     <h2 className="mb-4">Saw the Art? Meet the artists</h2>
                                 </div>
                             </Col>
-                            <Col className='px-5 d-flex flex-column align-items-center text-center' xs={12} md={4}>
+                            <Col className='px-3 pb-5 pb-md-2 d-flex flex-column align-items-center text-center' xs={12} md={4}>
                                 <div className='team-stepper__image mb-3'>
                                     <img src="/images/team-1.png" alt="Dr. Jonathan Graham" width="100%" height="100%" />
                                 </div>
@@ -307,19 +307,19 @@ export default function Home() {
                                     <div className="mb-3 body-2 text-warning">(Product and PR)</div>
                                 </div>
                                 <div>
-                                    <ul className='h-10 list-unstyled'>
-                                        <li className='pb-2'>Seasoned Irish GP with Proven Medical Expertise</li>
-                                        <li className='pb-2'>Running a 35-year-old GP practice</li>
-                                        <li className='pb-2'>Treated over 15,000 patients</li>
+                                    <ul className='h-10 list-unstyled three-col-stepper__content'>
+                                        <li className='pb-1'>Seasoned Irish GP with Proven Medical Expertise</li>
+                                        <li className='pb-1'>Running a 35-year-old GP practice</li>
+                                        <li className='pb-1'>Treated over 15,000 patients</li>
                                     </ul>
                                 </div>
-                                <div className='text-start'>
-                                    <a href='tel:+3530838766862' className='body-2 d-block mb-0 text-white text-decoration-none'><FontAwesomeIcon className='icon-color pe-1' icon={faPhone} /> +353 (0) 83-876-6862</a>
-                                    <a href='mailto:Jonathan@pracai.eu' className='body-2 d-block text-white text-decoration-none'><FontAwesomeIcon className='pe-1 icon-color' icon={faEnvelope} /> Jonathan@pracai.eu</a>
+                                <div className='three-col-stepper__content'>
+                                    <a href='tel:+3530838766862' className='body-2 d-block mb-1 text-white text-decoration-none'><FontAwesomeIcon className='icon-color pe-2' icon={faPhone} /> +353 (0) 83-876-6862</a>
+                                    <a href='mailto:Jonathan@pracai.eu' className='body-2 d-block text-white text-decoration-none'><FontAwesomeIcon className='icon-color pe-2' icon={faEnvelope} /> Jonathan@pracai.eu</a>
                                 </div>
                             </Col>
 
-                            <Col className='px-5 d-flex flex-column align-items-center text-center' xs={12} md={4}>
+                            <Col className='px-3 pb-5 pb-md-2 d-flex flex-column align-items-center text-center' xs={12} md={4}>
                                 <div className='team-stepper__image mb-3'>
                                     <img src="/images/team-2.png" alt="Shailesh Sharma" width="100%" height="100%" />
                                 </div>
@@ -328,20 +328,20 @@ export default function Home() {
                                     <div className="mb-3 body-2 text-warning">(Technology)</div>
                                 </div>
                                 <div>
-                                    <ul className='h-10 list-unstyled'>
-                                        <li className='pb-2'>Solution Architect Entrepreneur</li>
-                                        <li className='pb-2'>Engineered Web and Mobile Apps for 200+ Businesses</li>
-                                        <li className='pb-2'>Decade of experience managing large tech teams</li>
-                                        <li className='pb-2'>UCD MBA Alumnus</li>
+                                    <ul className='h-10 list-unstyled three-col-stepper__content'>
+                                        <li className='pb-1'>Solution Architect Entrepreneur</li>
+                                        <li className='pb-1'>Engineered Web and Mobile Apps for 200+ Businesses</li>
+                                        <li className='pb-1'>Decade of experience managing large tech teams</li>
+                                        <li className='pb-1'>UCD MBA Alumnus</li>
                                     </ul>
                                 </div>
-                                <div className='text-start'>
-                                    <a href='tel:+3530838707132' className='body-2 d-block mb-0 text-white text-decoration-none'><FontAwesomeIcon className='icon-color pe-1' icon={faPhone} /> +353 (0) 83-870-7132</a>
-                                    <a href='mailto:shailesh@pracai.eu' className='body-2 d-block text-white text-decoration-none'><FontAwesomeIcon className='pe-1 icon-color' icon={faEnvelope} /> shailesh@pracai.eu</a>
+                                <div className='three-col-stepper__content'>
+                                    <a href='tel:+3530838707132' className='body-2 d-block mb-1 text-white text-decoration-none'><FontAwesomeIcon className='icon-color pe-2' icon={faPhone} /> +353 (0) 83-870-7132</a>
+                                    <a href='mailto:shailesh@pracai.eu' className='body-2 d-block text-white text-decoration-none'><FontAwesomeIcon className='icon-color pe-2' icon={faEnvelope} /> shailesh@pracai.eu</a>
                                 </div>
                             </Col>
 
-                            <Col className='px-5 d-flex flex-column align-items-center text-center' xs={12} md={4}>
+                            <Col className='px-3 pb-5 pb-md-2 d-flex flex-column align-items-center text-center' xs={12} md={4}>
                                 <div className='team-stepper__image mb-3'>
                                     <img src="/images/team-3.png" alt="Harsh Mangla" width="100%" height="100%" />
                                 </div>
@@ -350,16 +350,16 @@ export default function Home() {
                                     <div className="mb-3 body-2 text-warning">(Sales and Marketing)</div>
                                 </div>
                                 <div>
-                                    <ul className='h-10 list-unstyled'>
-                                        <li className='pb-2'>IT SaaS Marketing Aficionado</li>
-                                        <li className='pb-2'>Experience managing IT sales team</li>
-                                        <li className='pb-2'>Built and Scaled a Successful EV Startup</li>
-                                        <li className='pb-2'>UCD MBA Alumnus</li>
+                                    <ul className='h-10 list-unstyled three-col-stepper__content'>
+                                        <li className='pb-1'>IT SaaS Marketing Aficionado</li>
+                                        <li className='pb-1'>Experience managing IT sales team</li>
+                                        <li className='pb-1'>Built and Scaled a Successful EV Startup</li>
+                                        <li className='pb-1'>UCD MBA Alumnus</li>
                                     </ul>
                                 </div>
-                                <div className='text-start'>
-                                    <a href='tel:+3530894632739' className='body-2 d-block mb-0 text-white text-decoration-none'><FontAwesomeIcon className='icon-color pe-1' icon={faPhone} /> +353 (0) 89-463-2739</a>
-                                    <a href='mailto:harsh@pracai.eu' className='body-2 text-white text-decoration-none'><FontAwesomeIcon className='pe-1 icon-color' icon={faEnvelope} /> harsh@pracai.eu</a>
+                                <div className='three-col-stepper__content'>
+                                    <a href='tel:+3530894632739' className='body-2 d-block mb-1 text-white text-decoration-none'><FontAwesomeIcon className='icon-color pe-2' icon={faPhone} /> +353 (0) 89-463-2739</a>
+                                    <a href='mailto:harsh@pracai.eu' className='body-2 text-white text-decoration-none'><FontAwesomeIcon className='icon-color pe-2' icon={faEnvelope} /> harsh@pracai.eu</a>
                                 </div>
                             </Col>
 
@@ -372,49 +372,12 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* <div id="Offerings" className='blue_bottom_stepper'>
-                <Container>
-                    <Row className="gx-5">
-                        <Col xs={12}>
-                            <div className="d-flex flex-column align-items-center text-center pb-5">
-                                <div className="h2 pb-4"><span className="h1 ps-2 fw-bold">Offerings</span></div>
-                            </div>
-                        </Col>
-                        <Col xs={12} md={8}>
-                            <ul style={{ fontSize: "22px", fontWeight: 500 }} className="lh-lg">
-                                <Row>
-                                    <Col xs={12} md={6}>
-                                        <li>Data Analytics Dashboards</li>
-                                        <li>Appointment Management</li>
-                                        <li>Patient Information</li>
-                                        <li>E-Prescription Management</li>
-                                        <li>Clinical Workflow</li>
-                                        <li>Telemedicine</li>
-                                    </Col>
-                                    <Col xs={12} md={6}>
-                                        <li>AI-driven Admin Automation</li>
-                                        <li>API Integration</li>
-                                        <li>Payments & Billing</li>
-                                        <li>Inventory Management</li>
-                                        <li>Patient Portal</li>
-                                        <li>Communications</li>
-                                    </Col>
-                                </Row>
-                            </ul>
-                        </Col>
-                        <Col xs={12} md={4}>
-                            <img width="100%" src="/images/solution.png" alt="solution" />
-                        </Col>
-                    </Row>
-                </Container>
-            </div> */}
-
             <div id="faq" className='blue_bottom_stepper'>
                 <Container>
-                    <Row className="gx-5">
+                    <Row>
                         <Col xs={12}>
-                            <div className="d-flex flex-column align-items-center text-center pb-5">
-                                <div className="h2 pb-4"><span className="h1 ps-2 fw-bold">Faq</span></div>
+                            <div className="d-flex flex-column align-items-center text-center pb-3 pb-md-4">
+                                <div className="h2 pb-0 pb-md-4"><span className="h1 ps-2 fw-bold">Faq</span></div>
                             </div>
                         </Col>
                         <Col xs={12} className="mb-2">
@@ -460,63 +423,6 @@ export default function Home() {
                     </Row>
                 </Container>
             </div>
-
-            {/* <div id="faq" className='site-content'>
-                <div>
-                    <img className="w-100" src="/images/Homepage-trim-3.svg" alt="shapes" width="100%" height="100%" />
-                </div>
-                <div className="back-blue-1 section_stepper text-white">
-                    <Container>
-                        <Row>
-                            <Col xs={12} className="mb-2">
-                                <div className='d-flex flex-column align-items-center text-center'>
-                                    <div className="h2 pb-4">
-                                        <div><span class="h1 ps-2 fw-bold">FAQs</span></div>
-                                    </div>
-                                    <Accordion className='w-100 custom-accordion'>
-                                        <Accordion.Item eventKey="0">
-                                            <Accordion.Header>1. What is ThePracAi Solution?</Accordion.Header>
-                                            <Accordion.Body>
-                                                ThePracAi Solution is a cutting-edge, AI-driven, cloud-based practice management system designed to transform healthcare operations. It streamlines appointments, patient records, health reports, and physician communication through an intuitive platform accessible anytime, anywhere.                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                        <Accordion.Item eventKey="1">
-                                            <Accordion.Header>2. How does ThePracAi Solution enhance efficiency?</Accordion.Header>
-                                            <Accordion.Body>
-                                                By leveraging GenAI, ThePracAi Solution saves up to 2.5 hours daily, allowing healthcare providers to focus more on patient care and less on administrative tasks.
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                        <Accordion.Item eventKey="2">
-                                            <Accordion.Header>3. How does ThePracAi Solution ensure data security?</Accordion.Header>
-                                            <Accordion.Body>
-                                                ThePracAi Solution employs advanced security measures to protect sensitive patient information and ensure compliance with healthcare regulations.
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                        <Accordion.Item eventKey="3">
-                                            <Accordion.Header>4. Is ThePracAi Solution customizable for different healthcare practices?</Accordion.Header>
-                                            <Accordion.Body>
-                                                Yes, ThePracAi Solution offers tailored solutions to meet the specific needs of different healthcare practices, ensuring it fits seamlessly into existing workflows.
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                        <Accordion.Item eventKey="4">
-                                            <Accordion.Header>5. How does ThePracAi Solution support advancements in healthcare operations?</Accordion.Header>
-                                            <Accordion.Body>
-                                                ThePracAi Solution is built on a cloud-based architecture with unlimited scope for advancements, allowing it to evolve with the ever-changing landscape of healthcare technology.
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                        <Accordion.Item eventKey="5">
-                                            <Accordion.Header>6. What makes ThePracAi Solution cost-effective?</Accordion.Header>
-                                            <Accordion.Body>
-                                                By automating routine tasks, reducing manual errors, and saving time, ThePracAi Solution helps healthcare practices reduce operational costs while improving efficiency.
-                                            </Accordion.Body>
-                                        </Accordion.Item>
-                                    </Accordion>
-                                </div>
-                            </Col>
-                        </Row>
-                    </Container>
-                </div>
-                <hr className='m-0' />
-            </div> */}
 
         </>
     )

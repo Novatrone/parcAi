@@ -1,3 +1,5 @@
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { useNavigate, useLocation } from 'react-router-dom'
@@ -27,27 +29,27 @@ export default function Footer({ handleClick }) {
                         <Col xs={6} md={4}>
                             <div className='d-flex justify-content-center'>
                                 <ul className="list-inline body-1 lh-lg fw-border">
-                                    <li className="menu-item">
+                                    <li className="menu-item active">
                                         <span role="button" onClick={() => navigate('/contact-us')} className='text-white'>Contact Us</span>
                                     </li>
-                                    <li className="menu-item">
+                                    <li className="menu-item active">
                                         <span role="button" onClick={() => navigate('/offerings')} className='text-white'>Offerings</span>
                                     </li>
                                     {pathname === '/' &&
                                         <>
-                                            <li className="menu-item">
+                                            <li className="menu-item active">
                                                 <span role="button" onClick={() => handleClick('sales_strategy')} className='text-white'>Sales Strategy</span>
                                             </li>
-                                            <li className="menu-item">
+                                            <li className="menu-item active">
                                                 <span role="button" onClick={() => handleClick('solution')} className='text-white'>Solution</span>
                                             </li>
-                                            <li className="menu-item">
+                                            <li className="menu-item active">
                                                 <span role="button" onClick={() => handleClick('our_team')} className='text-white'>Meet the artists</span>
                                             </li>
-                                            <li className="menu-item">
+                                            <li className="menu-item active">
                                                 <span role="button" onClick={() => handleClick('overview')} className='text-white'>Overview</span>
                                             </li>
-                                            <li className="menu-item">
+                                            <li className="menu-item active">
                                                 <span role="button" onClick={() => handleClick('faq')} className='text-white'>Faq</span>
                                             </li>
                                         </>
@@ -57,10 +59,13 @@ export default function Footer({ handleClick }) {
                         </Col>
                         <Col xs={12} md={4}>
                             <div className='d-flex flex-column justify-content-end align-items-center align-items-md-end h-100'>
+                                <div className='mb-4'>
+                                    <h3>Contact us</h3>
+                                </div>
                                 <div className='mb-3 d-flex gap-2'>
                                     <a
                                         href="https://www.instagram.com/"
-                                        className=""
+                                        className="active_icon"
                                         target="_blank"
                                         aria-label="Instagram"
                                         rel="noopener noreferrer"
@@ -69,7 +74,7 @@ export default function Footer({ handleClick }) {
                                     </a>
                                     <a
                                         href="https://twitter.com"
-                                        className=""
+                                        className="active_icon"
                                         target="_blank"
                                         aria-label="Twitter"
                                         rel="noopener noreferrer"
@@ -78,7 +83,7 @@ export default function Footer({ handleClick }) {
                                     </a>
                                     <a
                                         href="https://uk.linkedin.com/"
-                                        className=""
+                                        className="active_icon"
                                         target="_blank"
                                         aria-label="LinkedIn"
                                         rel="noopener noreferrer"
@@ -87,21 +92,13 @@ export default function Footer({ handleClick }) {
                                     </a>
                                 </div>
                                 <div className='py-2'>
-                                    <a href="mailto:info@pracai.eu" className="text-white text-decoration-none">
-                                        info@pracai.eu
+                                    <a href="mailto:info@pracai.eu" className="text-white active text-decoration-none">
+                                        <FontAwesomeIcon className='pe-1 icon-color' icon={faEnvelope} /> info@pracai.eu
                                     </a>
                                 </div>
                                 <div className='d-flex justify-content-end'>
                                     <p className="copyright body-1">
-                                        © PracAi 2024 <span>|</span> Built by <a
-                                            className="no-link"
-                                            href="/"
-                                            target="_blank"
-                                            aria-label="SoBold"
-                                            rel="noopener noreferrer"
-                                        >
-                                            PracAi
-                                        </a>
+                                        © PracAi 2024 <span>|</span> Built by PracAi
                                     </p>
                                 </div>
                             </div>
