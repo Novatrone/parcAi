@@ -363,6 +363,8 @@ h5 {
 @media (max-width: 769px) {
   .hero-home__blue-shapes-wrapper {
     bottom: 0rem;
+  }
+  .blue_top_stepper {
     margin-left: -0.5rem;
   }
 }
