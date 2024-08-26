@@ -43,7 +43,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div id="sales_strategy" className='site-content'>
+            <div id="sales_strategy" className='site-content fix_border_top'>
                 <div className="back-blue-1 section_stepper text-white">
                     <Container>
                         <Row>
@@ -219,7 +219,7 @@ export default function Home() {
             </div>
 
             <div id="contact_us" className='site-content'>
-                <div>
+                <div className='blue_top_stepper'>
                     <img className="w-100" src="/images/Homepage-trim-3.svg" alt="shapes" width="100%" height="100%" />
                 </div>
                 <div className="back-blue-1 section_stepper text-white">
