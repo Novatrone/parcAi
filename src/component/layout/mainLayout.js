@@ -113,10 +113,10 @@ export default function MainLayout({ children }) {
                     <></>
                 }
             </Navbar>
-            <Col>
+            <Col className='overflow-x-hidden'>
                 {children}
             </Col>
-            <Col>
+            <Col className='overflow-x-hidden'>
                 <Footer handleClick={handleClick} />
             </Col>
             {showScrollUp && (
