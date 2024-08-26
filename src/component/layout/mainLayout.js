@@ -48,6 +48,7 @@ export default function MainLayout({ children }) {
     // Scroll to the top whenever the pathname changes
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'instant' });
+        closeOffcanvas();
     }, [pathname]);
 
     return (
@@ -57,7 +58,7 @@ export default function MainLayout({ children }) {
                     <img src="/images/Logo-fill-light.png" width="160" style={{ objectFit: "contain" }} alt="logo" className="navigation__logo" />
                 </Col>
                 <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={toggleOffcanvas} />
-                <Offcanvas show={show} onHide={closeOffcanvas} placement="start">
+                <Offcanvas show={show} className="w-75" onHide={closeOffcanvas} placement="start">
                     <Offcanvas.Header closeButton>
                         {/* <Offcanvas.Title>Menu</Offcanvas.Title> */}
                     </Offcanvas.Header>
@@ -104,6 +105,13 @@ export default function MainLayout({ children }) {
                         </Nav.Item>
                     </Nav>
                 </Container>
+                {isMobile ?
+                    <span onClick={() => navigate('/')}>
+                        <img src="/images/Logo-fill-light.png" width="60" style={{ objectFit: "contain" }} alt="logo" className="navigation__logo" />
+                    </span>
+                    :
+                    <></>
+                }
             </Navbar>
             <Col>
                 {children}
