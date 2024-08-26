@@ -275,7 +275,7 @@ export default function Home() {
             </div>
 
             <div id="our_team" className='site-team'>
-                <div>
+                <div className='blue_top_stepper'>
                     <img className="w-100 -mb-2" src="/images/Homepage-trim-3.svg" alt="shapes" width="100%" height="100%" />
                 </div>
                 <div className="back-blue-1 section_stepper text-white">

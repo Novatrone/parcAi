@@ -181,6 +181,7 @@ h5 {
 .section_stepper_bottom {
   position: relative;
   display: flex;
+  width: 103%;
 }
 
 .blue_bottom_stepper {
@@ -355,7 +356,7 @@ h5 {
 
 .blue_top_stepper {
   margin-bottom: -0.2rem;
-  width: 125%;
+  width: 150%;
 }
 
 @media (max-width: 769px) {
