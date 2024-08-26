@@ -91,7 +91,7 @@ export default function Footer({ handleClick }) {
                                         <img src="/images/linked_in.png" width={60} alt='LinkedIn' />
                                     </a>
                                 </div>
-                                <div className='py-2'>
+                                <div className='py-2 active'>
                                     <a href="mailto:info@pracai.eu" className="text-white active text-decoration-none">
                                         <FontAwesomeIcon className='pe-1 icon-color' icon={faEnvelope} /> info@pracai.eu
                                     </a>

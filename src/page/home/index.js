@@ -301,7 +301,7 @@ export default function Home() {
                                         <li className='pb-1'>Treated over 15,000 patients</li>
                                     </ul>
                                 </div>
-                                <div className='three-col-stepper__content'>
+                                <div className='three-col-stepper__content active'>
                                     <a href='tel:+3530838766862' className='body-2 d-block mb-1 text-white text-decoration-none'><FontAwesomeIcon className='icon-color pe-2' icon={faPhone} /> +353 (0) 83-876-6862</a>
                                     <a href='mailto:Jonathan@pracai.eu' className='body-2 d-block text-white text-decoration-none'><FontAwesomeIcon className='icon-color pe-2' icon={faEnvelope} /> Jonathan@pracai.eu</a>
                                 </div>
@@ -323,7 +323,7 @@ export default function Home() {
                                         <li className='pb-1'>UCD MBA Alumnus</li>
                                     </ul>
                                 </div>
-                                <div className='three-col-stepper__content'>
+                                <div className='three-col-stepper__content active'>
                                     <a href='tel:+3530838707132' className='body-2 d-block mb-1 text-white text-decoration-none'><FontAwesomeIcon className='icon-color pe-2' icon={faPhone} /> +353 (0) 83-870-7132</a>
                                     <a href='mailto:shailesh@pracai.eu' className='body-2 d-block text-white text-decoration-none'><FontAwesomeIcon className='icon-color pe-2' icon={faEnvelope} /> shailesh@pracai.eu</a>
                                 </div>
@@ -345,7 +345,7 @@ export default function Home() {
                                         <li className='pb-1'>UCD MBA Alumnus</li>
                                     </ul>
                                 </div>
-                                <div className='three-col-stepper__content'>
+                                <div className='three-col-stepper__content active'>
                                     <a href='tel:+3530894632739' className='body-2 d-block mb-1 text-white text-decoration-none'><FontAwesomeIcon className='icon-color pe-2' icon={faPhone} /> +353 (0) 89-463-2739</a>
                                     <a href='mailto:harsh@pracai.eu' className='body-2 text-white text-decoration-none'><FontAwesomeIcon className='icon-color pe-2' icon={faEnvelope} /> harsh@pracai.eu</a>
                                 </div>

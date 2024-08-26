@@ -205,7 +205,7 @@ h5 {
 }
 
 .active :hover {
-  color: #84acfb !important;
+  color: #00ccf3 !important;
   filter: drop-shadow(1px 1px 20px #84acfb);
 }
 
