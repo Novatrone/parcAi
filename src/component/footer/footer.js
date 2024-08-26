@@ -11,7 +11,7 @@ export default function Footer({ handleClick }) {
 
     return (
         <>
-            <div style={{ marginBottom: "-2px" }} className="pippo-footer__image-wrapper">
+            <div style={{ marginBottom: "-2px", marginLeft: "-2px", width: "102%" }} className="pippo-footer__image-wrapper">
                 <img className="pippo-footer__image" src="/images/other-screen-footer-trim.svg" alt="shapes" width="100%" />
             </div>
             <div className="back-blue-1 section_stepper text-white">
