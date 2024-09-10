@@ -244,21 +244,31 @@ h5 {
 .navigation__logo-wrapper {
   position: absolute;
   z-index: -1;
-  /* background-image: url(https://pippo.ie/wp-content/uploads/2022/10/logo-behind-block.svg); */
+  background-image: url(../public/images/logo-behind-block.svg);
   background-size: cover;
   width: 24.5rem;
   height: 13.2rem;
   top: 0;
   padding-top: 10px;
-  padding-left: 5rem;
+  padding-left: 3rem;
   cursor: pointer;
   z-index: 99;
 }
+.navigation__logo-wrapper_mobile {
+  display: none;
+}
+
 @media (max-width: 769px) {
   .navigation__logo-wrapper {
     padding-top: 70px;
     padding-left: 0;
     display: none;
+  }
+  .navigation__logo-wrapper_mobile {
+    /* position: absolute; */
+    right: 0;
+    display: block;
+    padding-block: 0.5;
   }
 }
 
@@ -425,9 +435,13 @@ h5 {
   position: block;
 }
 
+.navbar-toggler {
+  background-color: #f0f0f0 !important;
+}
+
 @media (max-width: 769px) {
   .main-navbar {
-    background-color: white;
+    background-color: #32347a;
     padding: 0.5rem !important;
   }
 }

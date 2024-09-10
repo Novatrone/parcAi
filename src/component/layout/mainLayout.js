@@ -55,7 +55,7 @@ export default function MainLayout({ children }) {
         <>
             <Navbar sticky={isMobile ? "top" : "none"} expand="lg" variant="light" className="main-navbar">
                 <Col onClick={() => navigate('/')} className="navigation__logo-wrapper">
-                    <img src="/images/Logo-fill-light.png" width="160" style={{ objectFit: "contain" }} alt="logo" className="navigation__logo" />
+                    <img src="/images/Logo.png" width="160" style={{ objectFit: "contain" }} alt="logo" className="navigation__logo" />
                 </Col>
                 <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={toggleOffcanvas} />
                 <Offcanvas show={show} className="w-75" onHide={closeOffcanvas} placement="start">
@@ -106,9 +106,11 @@ export default function MainLayout({ children }) {
                     </Nav>
                 </Container>
                 {isMobile ?
-                    <span onClick={() => navigate('/')}>
-                        <img src="/images/Logo-fill-light.png" width="60" style={{ objectFit: "contain" }} alt="logo" className="navigation__logo" />
-                    </span>
+                    <div className='navigation__logo-wrapper_mobile'>
+                        <span onClick={() => navigate('/')}>
+                            <img src="/images/Logo.png" width="60" style={{ objectFit: "contain" }} alt="logo" className="navigation__logo" />
+                        </span>
+                    </div>
                     :
                     <></>
                 }
